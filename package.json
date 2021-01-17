@@ -1,11 +1,13 @@
 {
   "name": "mindful-commons",
-  "version": "1.0.3",
+  "version": "1.0.17",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    },
   "author": "Wideyedwonderer",
-  "license": "ISC"
+  "license": "ISC",
+  "files": ["dist/**", "dist"]
 }

@@ -1,10 +1,9 @@
-export interface CreateUpdateLogDto {
+export class CreateUpdateLogDto {
     id: string;
-    route: string;
+    route?: string;
     entityId?: string;
     info?: string;
-    dateUtcTimestamp?: number;
-    userId?: string;
+    userEmail?: string;
     serviceIdentificator?: string;
     codeIdentificator?: string;
     isError?: boolean;
