@@ -7,4 +7,5 @@ export class CreateUpdateLogDto {
     serviceIdentificator?: string;
     codeIdentificator?: string;
     isError?: boolean;
+    isWarn?:boolean;
 }

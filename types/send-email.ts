@@ -8,6 +8,6 @@ export interface SendEmailOpts {
   }
 export interface EmailFileAttachment {
     filename: string,
-    content: Buffer,
+    content: any,
     contentType: string;
 }

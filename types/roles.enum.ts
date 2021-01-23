@@ -1,5 +1,5 @@
 export enum UserRoles {
     User = "User",
-    Moderator = "Moderator",
+    Publisher = "Publisher",
     Admin = "Admin"  
 }
