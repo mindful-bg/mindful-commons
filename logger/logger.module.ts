@@ -12,12 +12,21 @@ import { MindfulLogger } from './mindful-logger';
         {
             provide: 'LOGGER_MS',
             useFactory: (configService: ConfigService) => {
+                const url = configService.get('ms.logger.url');
+                const queueName = configService.get('ms.logger.queueName');
+                if(!queueName) {
+                    throw new Error('No config found for logger queue name(ms.logger.queueName)')
+                }
+
+                if(!url) {
+                    throw new Error('No config found for logger url(ms.logger.url)')
+                }
               const mathSvcOptions = { 
                 name: 'LOGGER_MS', 
                 transport: Transport.RMQ,
                 options: {
-                  urls: [configService.get('ms.logger.url')],
-                  queue: configService.get('ms.logger.queueName'),
+                  urls: [url],
+                  queue: queueName,
                   queueOptions: {
                     durable: false
                         },
