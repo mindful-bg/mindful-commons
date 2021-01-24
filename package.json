@@ -7,7 +7,7 @@
   "scripts": {
     "build": "./node_modules/.bin/tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pub":"tsc && npm version patch && npm publish"
+    "pub":"git add . && git commit -m\"Auto-prepublish-commit\" && tsc && npm version patch && npm publish"
   },
   "author": "Wideyedwonderer",
   "license": "ISC",
