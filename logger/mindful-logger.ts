@@ -32,7 +32,7 @@ export class MindfulLogger {
 
     async warn(info: string, trace: string, userEmail?: string, route?: string) {
         const log: CreateUpdateLogDto = {id: trace, userEmail, info, route};
-        log.isError = true;
+        log.isWarn = true;
         log.serviceIdentificator = this.serviceName;
         this.logger.emit('log', log);
     }
