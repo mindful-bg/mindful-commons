@@ -1,12 +1,13 @@
 {
   "name": "mindful-commons",
-  "version": "1.0.22",
+  "version": "1.0.26",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "./node_modules/.bin/tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pub":"tsc && npm version patch && npm publish"
   },
   "author": "Wideyedwonderer",
   "license": "ISC",
@@ -17,5 +18,12 @@
   "devDependencies": {
     "@types/node": "^14.x",
     "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "@nestjs/core": "^7.5.1",
+    "@nestjs/common": "^7.6.5",
+    "@nestjs/config": "^0.6.2",
+    "@nestjs/microservices": "^7.6.5",
+    "rxjs": "^6.6.3"
   }
 }
