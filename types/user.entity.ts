@@ -4,7 +4,7 @@ export class User {
     id?: string;
     facebookId?: string;
     email?: string;
-    role?: UserRoles;
+    role?: UserRoles[];
     firstName?: string;
     lastName?: string;
     emailVerified?: boolean;
