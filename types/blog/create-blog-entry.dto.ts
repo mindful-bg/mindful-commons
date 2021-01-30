@@ -1,5 +1,5 @@
 import { CreateContentDto } from "../content";
 
-export class CreateBlogDto extends CreateContentDto {
+export class CreateBlogEntryDto extends CreateContentDto {
     category?: string;
 }
