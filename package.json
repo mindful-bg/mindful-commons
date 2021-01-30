@@ -24,6 +24,8 @@
     "@nestjs/common": "^7.6.5",
     "@nestjs/config": "^0.6.2",
     "@nestjs/microservices": "^7.6.5",
+    "class-transformer": "^0.3.2",
+    "class-validator": "^0.12.2",
     "rxjs": "^6.6.3"
   }
 }
