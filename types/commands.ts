@@ -7,6 +7,7 @@ export const COMMANDS = {
         GET: 'GET_CONTENT'
     },
     BLOG: {
-        CREATE: 'CREATE_BLOG'
+        CREATE: 'CREATE_BLOG',
+        CREATE_ENTRY: 'CREATE_ENTRY'
     }
 }
