@@ -5,5 +5,8 @@ export const COMMANDS = {
     CONTENT: {
         CREATE: 'CREATE_CONTENT',
         GET: 'GET_CONTENT'
+    },
+    BLOG: {
+        CREATE: 'CREATE_BLOG'
     }
 }
