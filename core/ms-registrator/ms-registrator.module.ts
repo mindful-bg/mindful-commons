@@ -64,7 +64,7 @@ import { MindfulMsType } from './ms-type.enum';
             if(!options.options.port) {
               throw new Error('Port config not found for mindful-ms-logger-controller')
             }
-            if(!options.options.host || options.options.utl.length < 1) {
+            if(!options.options.host) {
              throw new Error('Host config not found for mindful-ms-logger-controller')
            }
             return ClientProxyFactory.create(options);
@@ -82,7 +82,7 @@ import { MindfulMsType } from './ms-type.enum';
             if(!options.options.port) {
               throw new Error('Port config not found for mindful-ms-blog')
             }
-            if(!options.options.host || options.options.utl.length < 1) {
+            if(!options.options.host) {
              throw new Error('Host config not found for mindful-ms-blog')
            }
             const clientProxy = ClientProxyFactory.create(options);
@@ -102,7 +102,7 @@ import { MindfulMsType } from './ms-type.enum';
             if(!options.options.port) {
               throw new Error('Port config not found for mindful-ms-content')
             }
-            if(!options.options.host || options.options.utl.length < 1) {
+            if(!options.options.host) {
              throw new Error('Host config not found for mindful-ms-content')
            }
             const clientProxy = ClientProxyFactory.create(options);
