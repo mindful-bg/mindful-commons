@@ -1,0 +1,7 @@
+export enum MindfulMsType {
+    BLOG = "BLOG",
+    CONTENT = "CONTENT",
+    LOGGER = "LOGGER",
+    LOG_CONTROLLER = "LOG_CONTROLLER",
+    EMAIL_SENDER = "EMAIL_SENDER"
+}

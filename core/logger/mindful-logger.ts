@@ -1,7 +1,7 @@
 import { Inject, Injectable } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 import { ClientProxy } from "@nestjs/microservices";
-import { CreateUpdateLogDto } from "../types";
+import { CreateUpdateLogDto } from "../../types";
 
 
 @Injectable() 
