@@ -43,7 +43,7 @@ import { MindfulMsType } from './ms-type.enum';
                if(!options.options.queue) {
                  throw new Error('Queue config not found for mindful-ms-email-sender. Provide under ms.emailSender.queue.')
                }
-               if(!options.options.urls || options.options.utl.length < 1) {
+               if(!options.options.urls || options.options.urls.length < 1) {
                 throw new Error('Url config not found for mindful-ms-email-sender. Provide under ms.emailSender.urls.')
               }
                //@ts-ignore
