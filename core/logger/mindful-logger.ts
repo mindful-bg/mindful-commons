@@ -2,6 +2,7 @@ import { Inject, Injectable } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 import { ClientProxy } from "@nestjs/microservices";
 import { CreateUpdateLogDto } from "../../types";
+import { MindfulMsType } from "../ms-registrator/ms-type.enum";
 
 
 @Injectable() 
@@ -9,10 +10,14 @@ export class MindfulLogger {
     private serviceName: string;
 
     constructor(
-        @Inject('LOGGER_MS') private readonly logger: ClientProxy,
+        @Inject(MindfulMsType.LOGGER) private readonly logger: ClientProxy,
         private readonly configService: ConfigService 
     ) {
+
         this.serviceName = this.configService.get('serviceName');
+        if(this.serviceName) {
+            throw new Error('Service name config not found. Please provide it.')
+        }
     }
 
     async log(info: string, trace: string, userEmail?: string, route?: string) {
