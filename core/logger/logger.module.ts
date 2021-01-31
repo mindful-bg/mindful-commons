@@ -1,6 +1,5 @@
 import { Module  } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
-import { ClientProxyFactory, ClientsModule, Transport } from '@nestjs/microservices';
+import { ClientsModule } from '@nestjs/microservices';
 import { MindfulLogger } from './mindful-logger';
 
 
@@ -9,7 +8,6 @@ import { MindfulLogger } from './mindful-logger';
         ClientsModule
     ],
     providers: [
- 
           MindfulLogger
     ],
     exports: [
