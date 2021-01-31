@@ -15,7 +15,7 @@ export class MindfulLogger {
     ) {
 
         this.serviceName = this.configService.get('serviceName');
-        if(this.serviceName) {
+        if(!this.serviceName) {
             throw new Error('Service name config not found. Please provide it.')
         }
     }
