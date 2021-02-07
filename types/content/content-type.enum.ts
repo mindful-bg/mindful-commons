@@ -1,4 +1,4 @@
 export enum ContentType {
-    BLOG,
-    EXERCISE,
+    BLOG = "БЛОГ",
+    EXERCISE = "ПРАКТИКА",
 }
