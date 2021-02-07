@@ -19,8 +19,5 @@ export class GetContentFilter {
     type?: ContentType;
     @IsString()
     creatorId?: string;
-    @Allow()
-    limit?: number;
-    @Allow()
-    skip?: number;
+ 
 }
