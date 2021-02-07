@@ -2,6 +2,7 @@ import { Inject, Injectable } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 import { ClientProxy } from "@nestjs/microservices";
 import { CreateUpdateLogDto } from "../../types";
+import { getUtcTimestamp } from "../../utils";
 import { MindfulMsType } from "../ms-registrator/ms-type.enum";
 
 
@@ -23,6 +24,7 @@ export class MindfulLogger {
     async log(info: string, trace: string, userEmail?: string, route?: string) {
         const log: CreateUpdateLogDto = {id: trace, userEmail, info, route};
         log.isError = false;
+        log.timestamp = getUtcTimestamp();
         log.serviceIdentificator = this.serviceName;
         this.logger.emit('log', log);
     }
@@ -30,6 +32,7 @@ export class MindfulLogger {
     async error(info: string, trace: string, userEmail?: string, route?: string) {
         const log: CreateUpdateLogDto = {id: trace, userEmail, info, route};
         log.isError = true;
+        log.timestamp = getUtcTimestamp();
         log.serviceIdentificator = this.serviceName;
         this.logger.emit('log', log);
     }
@@ -38,6 +41,7 @@ export class MindfulLogger {
     async warn(info: string, trace: string, userEmail?: string, route?: string) {
         const log: CreateUpdateLogDto = {id: trace, userEmail, info, route};
         log.isWarn = true;
+        log.timestamp = getUtcTimestamp();
         log.serviceIdentificator = this.serviceName;
         this.logger.emit('log', log);
     }
