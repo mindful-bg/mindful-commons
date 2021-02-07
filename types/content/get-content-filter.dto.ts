@@ -1,4 +1,4 @@
-import { Allow } from "class-validator";
+import { Allow, IsString } from "class-validator";
 import { ContentType } from "./content-type.enum";
 import { MindfulAspects } from "./mindful-aspects.enum";
 
@@ -17,7 +17,7 @@ export class GetContentFilter {
     isPublished?: boolean;
     @Allow()
     type?: ContentType;
-    @Allow()
+    @IsString()
     creatorId?: string;
     @Allow()
     limit?: number;
