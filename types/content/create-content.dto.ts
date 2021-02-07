@@ -1,5 +1,6 @@
 import { Allow, IsBoolean, IsEnum, IsString, IsUUID } from "class-validator";
 import { ContentType } from "./content-type.enum";
+import { MindfulAspects } from "./mindful-aspects.enum";
 
 
 export class CreateContentDto {
@@ -31,8 +32,8 @@ export class CreateContentDto {
     @Allow()
     featuredVideo?: string;
 
-    @Allow()
-    mindfulZone?: string;
+    @IsEnum(MindfulAspects)
+    mindfulAspect?: string;
 
     @Allow()
     videoLink?:string;
