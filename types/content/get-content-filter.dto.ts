@@ -1,9 +1,12 @@
 import { Allow } from "class-validator";
 import { ContentType } from "./content-type.enum";
+import { MindfulAspects } from "./mindful-aspects.enum";
 
 export class GetContentFilter {
     @Allow()
     id?: string;
+    @Allow()
+    mindfulAspect?: MindfulAspects;
     @Allow()
     dateCreated?: number;
     @Allow()
