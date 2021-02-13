@@ -20,9 +20,6 @@ export class UserUpdateDto {
     location?: string;
 
     @Allow()
-    profilePicture?: string;
-
-    @Allow()
     @MaxLength(20)
     shortName?: string;
 }
