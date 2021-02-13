@@ -8,4 +8,6 @@ export class User {
     firstName?: string;
     lastName?: string;
     emailVerified?: boolean;
+    profilePicture?: string;
+    shortName?: string;
 }
