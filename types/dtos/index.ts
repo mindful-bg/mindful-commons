@@ -1,2 +1,2 @@
 export * from './create-update-log.dto';
-export * from './index'
+export * from './mindful-api-interface-dtos/index'
