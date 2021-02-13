@@ -1,6 +1,8 @@
-import { IsEmail, IsString, Length, Matches } from 'class-validator';
+import { Allow, IsEmail, IsString, Length, Matches } from 'class-validator';
 
 export class UserAuth {
+    @Allow()
+    id?: string;
     @IsEmail()
     @Length(5, 50)
     public email?: string;
