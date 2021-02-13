@@ -12,9 +12,11 @@ export class UserUpdateDto {
     @Allow()
     @MaxLength(100)
     contactEmail?: string;
+    
     @Allow()
     @MaxLength(30)
     birthDate?: string;
+
     @Allow()
     @MaxLength(50)
     location?: string;
