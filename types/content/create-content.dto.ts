@@ -14,13 +14,7 @@ export class CreateContentDto {
     @IsString()
     body: string;
 
-    @Matches(`/^
-        [a-z0-9]+   # One or more repetition of given characters
-        (?:         # A non-capture group.
-          -           # A hyphen
-          [a-z0-9]+   # One or more repetition of given characters
-        )*          # Zero or more repetition of previous group
-       $/`)
+    @Matches(/^[a-z0-9]+(?:-[a-z0-9]+)*$/)
     slug: string;
 
     @IsString()
