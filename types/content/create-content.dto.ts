@@ -1,4 +1,4 @@
-import { Allow, IsBoolean, IsEnum, IsString, IsUUID } from "class-validator";
+import { Allow, IsBoolean, IsEnum, IsString, IsUUID, Matches } from "class-validator";
 import { ContentType } from "./content-type.enum";
 import { MindfulAspects } from "./mindful-aspects.enum";
 
@@ -14,9 +14,15 @@ export class CreateContentDto {
     @IsString()
     body: string;
 
-    @IsString()
+    @Matches(`/^
+        [a-z0-9]+   # One or more repetition of given characters
+        (?:         # A non-capture group.
+          -           # A hyphen
+          [a-z0-9]+   # One or more repetition of given characters
+        )*          # Zero or more repetition of previous group
+       $/`)
     slug: string;
-    
+
     @IsString()
     digest: string;
 
