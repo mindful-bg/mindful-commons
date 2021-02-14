@@ -15,8 +15,11 @@ export class CreateContentDto {
     body: string;
 
     @IsString()
-    digest: string;
+    slug: string;
     
+    @IsString()
+    digest: string;
+
     @IsEnum(ContentType)
     type: ContentType;
 
