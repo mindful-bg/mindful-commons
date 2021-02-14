@@ -4,11 +4,13 @@ export const COMMANDS = {
     },
     CONTENT: {
         CREATE: 'CREATE_CONTENT',
+        GET_BY_SLUG: 'GET_BY_SLUG',
         GET: 'GET_CONTENT',
         UPDATE: 'UPDATE_CONTENT'
     },
     BLOG: {
         CREATE: 'CREATE_BLOG',
+        GET_BY_SLUG: 'GET_BY_SLUG',
         CREATE_ENTRY: 'CREATE_ENTRY',
         UPDATE_ENTRY: 'UPDATE_ENTRY',
         CREATE_CATEGORY: 'CREATE_CATEGORY',
