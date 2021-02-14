@@ -14,6 +14,9 @@ export class CreateContentDto {
     @IsString()
     body: string;
 
+    @IsString()
+    digest: string;
+    
     @IsEnum(ContentType)
     type: ContentType;
 
