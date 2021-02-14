@@ -1,4 +1,4 @@
-import { MaxLength, Allow } from "class-validator";
+import { Allow } from "class-validator";
 
 export class UserUpdateDto {
     @Allow()
