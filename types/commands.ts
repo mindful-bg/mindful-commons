@@ -10,7 +10,7 @@ export const COMMANDS = {
     },
     BLOG: {
         CREATE: 'CREATE_BLOG',
-        GET_BY_SLUG: 'GET_BY_SLUG',
+        GET_ENTRY_BY_SLUG: 'GET_ENTRY_BY_SLUG',
         CREATE_ENTRY: 'CREATE_ENTRY',
         UPDATE_ENTRY: 'UPDATE_ENTRY',
         CREATE_CATEGORY: 'CREATE_CATEGORY',
