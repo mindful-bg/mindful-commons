@@ -10,4 +10,5 @@ export class User {
     emailVerified?: boolean;
     profilePicture?: string;
     shortName?: string;
+    userStoryContentId?: string;
 }
