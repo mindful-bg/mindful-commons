@@ -1,4 +1,5 @@
 import { Allow, IsEmail, IsString, Length, Matches } from 'class-validator';
+import { MindfulRegex } from '../../../constants/regex';
 
 export class UserAuth {
     @Allow()
@@ -7,7 +8,7 @@ export class UserAuth {
     @Length(5, 50)
     public email?: string;
     @IsString()
-    @Matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/)
+    @Matches(MindfulRegex.password.regex, {message: MindfulRegex.password.errorMessage})
     public password?: string;
     
 }
