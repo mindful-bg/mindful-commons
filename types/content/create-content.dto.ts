@@ -1,6 +1,7 @@
 import { Allow, IsBoolean, IsEnum, IsString, IsUUID, Matches } from "class-validator";
 import { ContentType } from "./content-type.enum";
 import { MindfulAspects } from "./mindful-aspects.enum";
+import { MindfulContentFunctionType } from "./mindful-content-function-type";
 
 
 export class CreateContentDto {
@@ -23,6 +24,12 @@ export class CreateContentDto {
     @IsEnum(ContentType)
     type: ContentType;
 
+    @IsEnum(MindfulAspects)
+    mindfulAspect?: string;
+
+    @IsEnum(MindfulContentFunctionType)
+    mindfulContentFunctionType?: string;
+
     @IsBoolean()
     isDraft: boolean;
 
@@ -32,17 +39,16 @@ export class CreateContentDto {
     @IsBoolean()
     isApproved: boolean;
 
+    // If featured image is present, video is not featured. 
+    // If video is present, but no feature image is present, video is featured 
     @Allow()
-    featuredImage?: string;
+    featuredImageUUID?: string;
 
     @Allow()
-    featuredVideo?: string;
-
-    @IsEnum(MindfulAspects)
-    mindfulAspect?: string;
+    vimeoVideoId?:string;
 
     @Allow()
-    videoLink?:string;
+    audioFileUUID?: string;
 
     @Allow()
     tags?: string[];
