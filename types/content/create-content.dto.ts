@@ -25,19 +25,16 @@ export class CreateContentDto {
     type: ContentType;
 
     @IsEnum(MindfulAspects)
-    mindfulAspect?: string;
+    mindfulAspect?: MindfulAspects;
 
     @IsEnum(MindfulContentFunctionType)
-    mindfulContentFunctionType?: string;
+    mindfulContentFunctionType?: MindfulContentFunctionType;
 
     @IsBoolean()
     isDraft: boolean;
 
     @IsBoolean()
     isPublished: boolean;
-
-    @IsBoolean()
-    isApproved: boolean;
 
     // If featured image is present, video is not featured. 
     // If video is present, but no feature image is present, video is featured 
