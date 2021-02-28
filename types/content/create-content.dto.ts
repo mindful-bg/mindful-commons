@@ -9,47 +9,47 @@ export class CreateContentDto {
     @IsUUID()
     creatorId: string;
 
-    @IsString({message: "Заглавието е задължително"})
+    @IsString({message: "$property$Заглавието е задължително"})
     @MinLength(8, {message: "Заглавието трябва да е от поне 8 символа"})
     @MaxLength(40, {message: "Заглавието трябва да е от максимум 40 символа"})
     title: string;
 
-    @IsString({message: "Липсва съдържание"})
+    @IsString({message: "$property$Липсва съдържание"})
     body: string;
 
-    @Matches(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, {message: "Невалиден формат на слъг-а. Използвайте латински букви, числа и тирета(-)."})
-    @MaxLength(40, {message: "Слъг-а трябва да е от максимум 45 символа"})
+    @Matches(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, {message: "$property$Невалиден формат на слъг-а. Използвайте латински букви, числа и тирета(-)."})
+    @MaxLength(45, {message: "$property$Слъг-а трябва да е от максимум $constraint1 символа. Сега дължината е: $value"})
     slug: string;
 
     @IsString()
-    @MinLength(80, {message: "Извадката трябва да е от поне 80 символа"})
-    @MaxLength(140, {message: "Извадката трябва да е максимум 140 символа"})
+    @MinLength(80, {message: "$property$Извадката трябва да е от поне $constraint1 символа. Сега дължината е: $value"})
+    @MaxLength(140, {message: "$property$Извадката трябва да е максимум $constraint1 символа. Сега дължината е: $value"})
     digest: string;
 
     @IsEnum(ContentType)
     type: ContentType;
 
-    @IsEnum(MindfulAspects, {message: "Аспект на съзнанието е задължително поле."})
+    @IsEnum(MindfulAspects, {message: "$property$Аспект на съзнанието е задължително поле."})
     mindfulAspect?: MindfulAspects;
 
-    @IsEnum(MindfulContentFunctionType, {message: "Функция е задължително поле."})
+    @IsEnum(MindfulContentFunctionType, {message: "$property$Функция е задължително поле."})
     mindfulContentFunctionType?: MindfulContentFunctionType;
 
     // If featured image is present, video is not featured. 
     // If video is present, but no feature image is present, video is featured 
     @IsOptional()
-    @IsUUID()
+    @IsUUID(4, {message: "$property$Нещо се случи при избора на заглавна снимка. Моля опитайте отново или се свържете с администратор."})
     featuredImageUUID?: string;
 
     @IsOptional()
-    @IsNumber()
+    @IsNumber({}, {message: "$property$Вимео ИД трябва да е число."})
     vimeoVideoId?:number;
 
     @IsOptional()
-    @IsUUID()
+    @IsUUID(4, {message: "$property$Нещо се случи с аудио файла. Моля опитайте отново или се свържете с администратор."})
     audioFileUUID?: string;
 
     @IsOptional()
-    @IsArray()
+    @IsArray({message:  "$property$Нещо се случи с таговете. Моля опитайте отново или се свържете с администратор."})
     tags?: string[];
 }
