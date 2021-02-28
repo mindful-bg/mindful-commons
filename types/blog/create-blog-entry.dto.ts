@@ -1,7 +1,8 @@
-import { Allow } from "class-validator";
+import { Allow, IsOptional, IsString } from "class-validator";
 import { CreateContentDto } from "../content";
 
 export class CreateBlogEntryDto extends CreateContentDto {
-    @Allow()
+    @IsOptional()
+    @IsString()
     categoryId?: string;
 }
