@@ -10,8 +10,8 @@ export class CreateContentDto {
     creatorId: string;
 
     @IsString({message: "$property$Заглавието е задължително"})
-    @MinLength(8, {message: "Заглавието трябва да е от поне 8 символа"})
-    @MaxLength(40, {message: "Заглавието трябва да е от максимум 40 символа"})
+    @MinLength(8, {message: "$property$Заглавието трябва да е от поне 8 символа"})
+    @MaxLength(40, {message: "$property$Заглавието трябва да е от максимум 40 символа"})
     title: string;
 
     @IsString({message: "$property$Липсва съдържание"})
