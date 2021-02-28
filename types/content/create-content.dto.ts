@@ -1,4 +1,4 @@
-import { Allow, IsBoolean, IsEnum, IsString, IsUUID, Matches } from "class-validator";
+import { Allow, IsArray, IsBoolean, IsEnum, IsNumber, IsOptional, IsString, IsUUID, Length, Matches, MaxLength, MinLength } from "class-validator";
 import { ContentType } from "./content-type.enum";
 import { MindfulAspects } from "./mindful-aspects.enum";
 import { MindfulContentFunctionType } from "./mindful-content-function-type";
@@ -9,44 +9,47 @@ export class CreateContentDto {
     @IsUUID()
     creatorId: string;
 
-    @IsString()
+    @IsString({message: "Заглавието е задължително"})
+    @MinLength(8, {message: "Заглавието трябва да е от поне 8 символа"})
+    @MaxLength(40, {message: "Заглавието трябва да е от максимум 40 символа"})
     title: string;
 
-    @IsString()
+    @IsString({message: "Липсва съдържание"})
     body: string;
 
-    @Matches(/^[a-z0-9]+(?:-[a-z0-9]+)*$/)
+    @Matches(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, {message: "Невалиден формат на слъг-а. Използвайте латински букви, числа и тирета(-)."})
+    @MaxLength(40, {message: "Слъг-а трябва да е от максимум 45 символа"})
     slug: string;
 
     @IsString()
+    @MinLength(80, {message: "Извадката трябва да е от поне 80 символа"})
+    @MaxLength(140, {message: "Извадката трябва да е максимум 140 символа"})
     digest: string;
 
     @IsEnum(ContentType)
     type: ContentType;
 
-    @IsEnum(MindfulAspects)
+    @IsEnum(MindfulAspects, {message: "Аспект на съзнанието е задължително поле."})
     mindfulAspect?: MindfulAspects;
 
-    @IsEnum(MindfulContentFunctionType)
+    @IsEnum(MindfulContentFunctionType, {message: "Функция е задължително поле."})
     mindfulContentFunctionType?: MindfulContentFunctionType;
-
-    @IsBoolean()
-    isDraft: boolean;
-
-    @IsBoolean()
-    isPublished: boolean;
 
     // If featured image is present, video is not featured. 
     // If video is present, but no feature image is present, video is featured 
-    @Allow()
+    @IsOptional()
+    @IsUUID()
     featuredImageUUID?: string;
 
-    @Allow()
-    vimeoVideoId?:string;
+    @IsOptional()
+    @IsNumber()
+    vimeoVideoId?:number;
 
-    @Allow()
+    @IsOptional()
+    @IsUUID()
     audioFileUUID?: string;
 
-    @Allow()
+    @IsOptional()
+    @IsArray()
     tags?: string[];
 }
