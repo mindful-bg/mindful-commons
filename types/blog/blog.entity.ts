@@ -7,6 +7,5 @@ export class Blog {
     id: string;
   }[]; 
   entries: BlogEntry[];
-  userStoryContentId: string;
   userNeedsApprovalToPost: boolean;
 }
