@@ -4,4 +4,5 @@ export * from './rename-category.dto';
 export * from './reset-password.dto';
 export * from './update-user.dto';
 export * from './user-auth.dto';
-export * from './update-publisher-slug.dto'
+export * from './update-publisher-slug.dto';
+export * from './get-publishers.dto';
