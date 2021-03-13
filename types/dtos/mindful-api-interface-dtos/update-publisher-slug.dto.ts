@@ -1,0 +1,7 @@
+import { Matches, MaxLength } from "class-validator";
+
+export class UpdatePublisherSlugDto {
+    @Matches(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, {message: "Невалиден формат на слъг-а. Използвайте латински букви, числа и тирета(-)."})
+    @MaxLength(45, {message: "Слъг-а трябва да е от максимум $constraint1 символа."})
+    slug?: string;
+}
