@@ -1,4 +1,5 @@
 import { Content } from "../content";
+import { GetContentDto } from "../content/get-content.dto";
 
 export class GetBlogEntriesDto {
     id: string;
@@ -6,5 +7,5 @@ export class GetBlogEntriesDto {
         name: string;
         id: string;
     }
-    content: Content
+    content: GetContentDto
 }
