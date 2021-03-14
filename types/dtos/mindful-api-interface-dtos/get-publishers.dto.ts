@@ -1,4 +1,5 @@
 import { Expose } from "class-transformer";
+import { GetContentDto } from "../../content";
 
 export class GetPublishersDto {
     @Expose()
@@ -10,7 +11,7 @@ export class GetPublishersDto {
     @Expose()
     shortName?: string;
     @Expose()
-    slug?: string;
+    slug: string;
     @Expose()
-    personalStoryContentId?: string;
+    personalStory: GetContentDto;
 }
