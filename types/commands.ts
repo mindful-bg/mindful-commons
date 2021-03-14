@@ -5,8 +5,12 @@ export const COMMANDS = {
     CONTENT: {
         CREATE: 'CREATE_CONTENT',
         GET_BY_SLUG: 'GET_BY_SLUG',
+        GET_BODYLESS_BY_SLUG: 'GET_BODYLESS_BY_SLUG',
+        GET_BY_ID: 'GET_BY_ID',
+        GET_BODYLESS_BY_ID: 'GET_BODYLESS_CONTENT_BY_ID',
         GET: 'GET_CONTENT',
-        UPDATE: 'UPDATE_CONTENT'
+        UPDATE: 'UPDATE_CONTENT',
+        
     },
     BLOG: {
         CREATE: 'CREATE_BLOG',
