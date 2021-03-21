@@ -30,7 +30,7 @@ export class CreateContentDto {
     type: ContentType;
 
     @IsEnum(MindfulAspects, {message: "Аспект на съзнанието е задължително поле."})
-    mindfulAspect?: MindfulAspects;
+    mindfulAspect: MindfulAspects;
 
     @IsEnum(MindfulContentFunctionType, {message: "Функция е задължително поле."})
     mindfulContentFunctionType?: MindfulContentFunctionType;
