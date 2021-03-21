@@ -33,7 +33,7 @@ export class CreateContentDto {
     mindfulAspect: MindfulAspects;
 
     @IsEnum(MindfulContentFunctionType, {message: "Функция е задължително поле."})
-    mindfulContentFunctionType?: MindfulContentFunctionType;
+    mindfulContentFunctionType: MindfulContentFunctionType;
 
     // If featured image is present, video is not featured. 
     // If video is present, but no feature image is present, video is featured 
