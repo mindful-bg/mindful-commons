@@ -34,4 +34,6 @@ export class GetContentDto {
     audioFileUUID?: string;
     @Expose()
     tags?: string[];
+    @Expose()
+    isPublished?: boolean
 }
