@@ -14,8 +14,5 @@ export class UserUpdateDto {
     birthDate?: string;
 
     @Allow()
-    location?: string;
-
-    @Allow()
-    shortName?: string;
+    gender?: string;
 }
