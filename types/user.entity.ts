@@ -5,6 +5,7 @@ export class User {
     facebookId?: string;
     email?: string;
     roles?: UserRoles[];
+    birthDate?: number;
     firstName?: string;
     lastName?: string;
     gender?: string;
