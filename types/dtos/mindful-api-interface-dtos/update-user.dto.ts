@@ -11,7 +11,7 @@ export class UserUpdateDto {
     contactEmail?: string;
 
     @Allow()
-    birthDate?: string;
+    birthDate?: number;
 
     @Allow()
     gender?: string;
