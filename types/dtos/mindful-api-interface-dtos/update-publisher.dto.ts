@@ -16,4 +16,7 @@ export class UpdatePublisherDto {
     @MaxLength(20)
     @IsOptional()
     shortName?: string;
+
+    @IsOptional()
+    profileVisible?: boolean;
 }

@@ -7,9 +7,6 @@ export class User {
     roles?: UserRoles[];
     firstName?: string;
     lastName?: string;
+    gender?: string;
     emailVerified?: boolean;
-    profilePicture?: string;
-    shortName?: string;
-    slug?: string;
-    personalStoryContentId?: string;
 }
