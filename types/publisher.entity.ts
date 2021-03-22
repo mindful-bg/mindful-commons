@@ -1,7 +1,7 @@
 import { User } from "./user.entity";
 
 export class Publisher extends User {
-    communityPicture?: string;
+    communityPictureUUID?: string;
     shortName?: string;
     slug: string;
     shortDescription?: string;
