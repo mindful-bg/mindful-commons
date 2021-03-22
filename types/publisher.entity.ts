@@ -7,4 +7,5 @@ export class Publisher extends User {
     shortDescription?: string;
     personalStoryContentId?: string;
     profileVisible?: boolean;
+    title?: string;
 }
