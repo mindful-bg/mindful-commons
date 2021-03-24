@@ -1,7 +1,7 @@
 import { IsOptional, IsString } from "class-validator";
-import { EditContentDto } from "../content/edit-content.dto";
+import { UpdateContentDto } from "../content";
 
-export class EditBlogEntryDto extends EditContentDto {
+export class EditBlogEntryDto extends UpdateContentDto {
     @IsOptional()
     @IsString()
     categoryId?: string;
