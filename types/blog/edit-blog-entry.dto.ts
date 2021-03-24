@@ -1,7 +1,7 @@
 import { IsUUID } from "class-validator";
 import { CreateBlogEntryDto } from "./create-blog-entry.dto";
 
-export class EditBlogEntry extends CreateBlogEntryDto {
+export class EditBlogEntryDto extends CreateBlogEntryDto {
     @IsUUID()
     id: string;
 }
