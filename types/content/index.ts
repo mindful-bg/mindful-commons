@@ -5,3 +5,4 @@ export * from './mindful-content-function-type';
 export * from './get-content-filter.dto';
 export * from './content.entity';
 export * from './get-content.dto';
+export * from './edit-content.dto';
