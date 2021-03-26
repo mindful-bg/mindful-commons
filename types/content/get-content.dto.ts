@@ -31,7 +31,7 @@ export class GetContentDto {
     @Expose()
     vimeoVideoId?:number;
     @Expose()
-    audioFileFileName?: string;
+    audioFileName?: string;
     @Expose()
     tags?: string[];
     @Expose()

@@ -47,7 +47,7 @@ export class CreateContentDto {
 
     @IsOptional()
     @IsString({message: "Нещо се случи с аудио файла. Моля опитайте отново или се свържете с администратор."})
-    audioFileFileName?: string;
+    audioFileName?: string;
 
     @IsOptional()
     @IsArray({message:  "Нещо се случи с таговете. Моля опитайте отново или се свържете с администратор."})
