@@ -38,16 +38,16 @@ export class CreateContentDto {
     // If featured image is present, video is not featured. 
     // If video is present, but no feature image is present, video is featured 
     @IsOptional()
-    @IsUUID(4, {message: "Нещо се случи при избора на заглавна снимка. Моля опитайте отново или се свържете с администратор."})
-    featuredImageUUID?: string;
+    @IsString({message: "Нещо се случи при избора на заглавна снимка. Моля опитайте отново или се свържете с администратор."})
+    featuredImageFileName?: string;
 
     @IsOptional()
     @IsNumber({}, {message: "Вимео ИД трябва да е число."})
     vimeoVideoId?:number;
 
     @IsOptional()
-    @IsUUID(4, {message: "Нещо се случи с аудио файла. Моля опитайте отново или се свържете с администратор."})
-    audioFileUUID?: string;
+    @IsString({message: "Нещо се случи с аудио файла. Моля опитайте отново или се свържете с администратор."})
+    audioFileFileName?: string;
 
     @IsOptional()
     @IsArray({message:  "Нещо се случи с таговете. Моля опитайте отново или се свържете с администратор."})

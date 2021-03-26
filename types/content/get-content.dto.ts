@@ -27,11 +27,11 @@ export class GetContentDto {
     @Expose()
     mindfulContentFunctionType: MindfulContentFunctionType;
     @Expose()
-    featuredImageUUID?: string;
+    featuredImageFileName?: string;
     @Expose()
     vimeoVideoId?:number;
     @Expose()
-    audioFileUUID?: string;
+    audioFileFileName?: string;
     @Expose()
     tags?: string[];
     @Expose()
