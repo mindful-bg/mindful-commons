@@ -14,4 +14,10 @@ export class GetPublishersDto {
     slug: string;
     @Expose()
     personalStory: GetContentDto;
+    @Expose()
+    shortDescription: string;
+    @Expose()
+    title: string;
+    @Expose()  
+    communityPictureUUID: string;
 }
