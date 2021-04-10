@@ -10,7 +10,7 @@ export const COMMANDS = {
         GET_BODY_BY_ID: 'GET_BODY_C_BY_ID',
         GET: 'GET_CONTENT',
         UPDATE: 'UPDATE_CONTENT',
-        
+        PUBLISH: 'PUBLISH'
     },
     BLOG: {
         CREATE: 'CREATE_BLOG',
@@ -20,6 +20,7 @@ export const COMMANDS = {
         CREATE_CATEGORY: 'CREATE_CATEGORY',
         GET_CATEGORIES: 'GET_CATEGORIES',
         RENAME_CATEGORY: 'RENAME_CATEGORY',
-        GET_ENTRIES: 'GET_ENTRIES'
+        GET_ENTRIES: 'GET_ENTRIES',
+        PUBLISH: 'PUBLISH'
     }
 }
