@@ -6,10 +6,10 @@ export enum MindfulContentFunctionType {
 export const getMindfulFunctionViewValue = (funciton: MindfulContentFunctionType) => {
     switch(funciton) {
         case(MindfulContentFunctionType.CONNECTING): {
-            return 'Свързващ'
+            return 'Свързваща'
         }
         case(MindfulContentFunctionType.STRUCTURING): {
-            return 'Структуриращ'
+            return 'Структурираща'
         }
     }
 }
