@@ -9,12 +9,11 @@ export class UpdatePublisherDto {
     @IsOptional()
     title?: string;
 
-    @MaxLength(60)
+    @MaxLength(75)
     @IsOptional()
-    shortDescription?: string;
+    quote?: string;
 
     @MaxLength(20)
-    @IsOptional()
     shortName?: string;
 
     @IsOptional()
