@@ -1,4 +1,4 @@
-import { IsOptional, Matches, MaxLength } from "class-validator";
+import { IsOptional, IsString, Matches, MaxLength } from "class-validator";
 
 export class UpdatePublisherDto {
     @Matches(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, {message: "Невалиден формат на слъг-а. Използвайте латински букви, числа и тирета(-)."})
@@ -14,6 +14,7 @@ export class UpdatePublisherDto {
     quote?: string;
 
     @MaxLength(20)
+    @IsString()
     shortName?: string;
 
     @IsOptional()
