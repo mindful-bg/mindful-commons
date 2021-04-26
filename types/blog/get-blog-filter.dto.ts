@@ -7,5 +7,5 @@ export class GetBlogFilter extends GetContentFilter {
     @Allow()
     skip?: number;
     @Allow()
-    categoryId: string;
+    categorySlug: string;
 }
