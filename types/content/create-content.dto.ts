@@ -24,7 +24,7 @@ export class CreateContentDto {
     @IsOptional()
     @MinLength(80, {message: "Извадката трябва да е от поне $constraint1 символа."})
     @MaxLength(175, {message: "Извадката трябва да е максимум $constraint1 символа."})
-    digest?: string;
+    digest?: string | null;
 
     @IsEnum(ContentType)
     type: ContentType;
