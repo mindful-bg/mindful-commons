@@ -15,7 +15,7 @@ export class GetPublishersDto {
     @Expose()
     personalStory: GetContentDto;
     @Expose()
-    shortDescription: string;
+    quote: string;
     @Expose()
     title: string;
     @Expose()  
