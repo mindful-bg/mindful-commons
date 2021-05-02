@@ -3,7 +3,7 @@ import { GetContentDto } from "../../content";
 
 export class GetPublishersDto {
     @Expose()
-    id?: string;
+    id: string;
     @Expose()
     firstName?: string;
     @Expose()
