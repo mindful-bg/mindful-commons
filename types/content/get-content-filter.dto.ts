@@ -22,5 +22,8 @@ export class GetContentFilter {
     type?: ContentType;
     @IsString()
     creatorId?: string;
- 
+    @Allow()
+    hasVideo?: boolean;
+    @Allow()
+    hasAudio?: boolean;
 }
