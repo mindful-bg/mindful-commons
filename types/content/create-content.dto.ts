@@ -37,7 +37,7 @@ export class CreateContentDto {
 
     // If featured image is present, video is not featured. 
     // If video is present, but no feature image is present, video is featured 
-    @IsString({message: "Заглавната снимка е задължително поле."})
+    @IsString({message: "Водеща снимка е задължително поле."})
     featuredImageFileName?: string;
 
     @IsOptional()
