@@ -20,7 +20,7 @@ export class GetContentFilter {
     isPublished?: boolean;
     @Allow()
     type?: ContentType;
-    @IsString()
+    @Allow()
     creatorId?: string;
     @Allow()
     hasVideo?: boolean;
