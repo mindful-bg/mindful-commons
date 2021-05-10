@@ -27,7 +27,7 @@ export class GetContentDto {
     @Expose()
     mindfulContentFunctionType: MindfulContentFunctionType;
     @Expose()
-    featuredImageFileName?: string;
+    featuredImageFileName: string;
     @Expose()
     vimeoVideoId?:number;
     @Expose()
