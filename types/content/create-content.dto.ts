@@ -40,7 +40,7 @@ export class CreateContentDto {
     @IsString({message: "Водеща снимка е задължително поле."})
     featuredImageFileName?: string;
 
-    @IsOptional()
+    @IsOptional() 
     @IsNumber({}, {message: "Вимео ИД трябва да е число."})
     vimeoVideoId?:number;
 

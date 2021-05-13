@@ -9,7 +9,7 @@ export class GetPublishersDto {
     @Expose()
     lastName?: string;
     @Expose()
-    shortName?: string;
+    shortName: string;
     @Expose()
     slug: string;
     @Expose()
