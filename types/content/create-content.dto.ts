@@ -10,7 +10,7 @@ export class CreateContentDto {
     creatorId: string;
 
     @IsString({message: "Заглавието е задължително"})
-    @MinLength(8, {message: "Заглавието трябва да е от поне 8 символа"})
+    @MinLength(5, {message: "Заглавието трябва да е от поне 8 символа"})
     @MaxLength(40, {message: "Заглавието трябва да е от максимум 40 символа"})
     title: string;
 
@@ -22,8 +22,8 @@ export class CreateContentDto {
     slug: string;
 
     @IsOptional()
-    @MinLength(80, {message: "Извадката трябва да е от поне $constraint1 символа."})
-    @MaxLength(175, {message: "Извадката трябва да е максимум $constraint1 символа."})
+    @MinLength(30, {message: "Извадката трябва да е от поне $constraint1 символа."})
+    @MaxLength(80, {message: "Извадката трябва да е максимум $constraint1 символа."})
     digest?: string | null;
 
     @IsEnum(ContentType)
