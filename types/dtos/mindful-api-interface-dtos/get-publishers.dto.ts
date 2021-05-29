@@ -20,4 +20,6 @@ export class GetPublishersDto {
     title: string;
     @Expose()  
     communityPictureUUID: string;
+    @Expose()  
+    joinedAsPublisherDate: number;
 }
