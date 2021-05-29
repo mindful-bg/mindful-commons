@@ -22,6 +22,4 @@ export class GetPublishersDto {
     communityPictureUUID: string;
     @Expose()  
     joinedAsPublisherDate: number;
-    @Expose()
-    isTeamMember: boolean;
 }
