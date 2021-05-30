@@ -10,7 +10,7 @@ export class UpdatePublisherDto {
     @IsOptional()
     title?: string;
 
-    @MaxLength(75)
+    @MaxLength(150)
     @IsOptional()
     quote?: string;
 
