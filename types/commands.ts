@@ -11,7 +11,8 @@ export const COMMANDS = {
         GET: 'GET_CONTENT',
         UPDATE: 'UPDATE_CONTENT',
         PUBLISH: 'PUBLISH',
-        GET_TAGS: 'GET_TAGS'
+        GET_TAGS: 'GET_TAGS',
+        GET_SERIES: 'GET_SERIES'
     },
     BLOG: {
         CREATE: 'CREATE_BLOG',

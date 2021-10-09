@@ -18,7 +18,7 @@ export class GetContentDto {
     @Expose()
     slug: string;
     @Expose()
-    digest: string;
+    digest?: string;
     @Expose()
     type: ContentType;
     @Expose()
