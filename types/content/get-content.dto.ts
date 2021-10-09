@@ -8,7 +8,7 @@ export class GetContentDto {
     @Expose()
     dateCreated: number;
     @Expose()
-    datePublished: number;
+    datePublished?: number;
     @Expose()
     creatorId: string;
     @Expose()
