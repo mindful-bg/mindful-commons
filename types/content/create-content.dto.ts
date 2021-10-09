@@ -9,7 +9,7 @@ export class CreateContentDto {
 
     @IsString({message: "Заглавието е задължително"})
     @MinLength(5, {message: "Заглавието трябва да е от поне 8 символа"})
-    @MaxLength(40, {message: "Заглавието трябва да е от максимум 40 символа"})
+    @MaxLength(75, {message: "Заглавието трябва да е от максимум 75 символа"})
     title: string;
 
     @IsString({message: "Липсва съдържание"})
