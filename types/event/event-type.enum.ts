@@ -1,3 +1,3 @@
-export declare enum EventType {
+export enum EventType {
     CONTENT_PUBLISHED = "CONTENT_PUBLISHED"
 }

@@ -1,4 +1,4 @@
-export declare class Series {
+export class Series {
     creatorId: string;
     contentId: string;
     contentIdsList: string[];

@@ -1,4 +1,4 @@
-export declare class MindfulSubscription {
+export class MindfulSubscription {
     id: string;
     userId: string;
     subscribedToPublishersIds?: string[];

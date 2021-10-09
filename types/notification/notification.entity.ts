@@ -1,4 +1,4 @@
-export declare class Notification {
+export class Notification {
     id: string;
     userId: string;
     subscribedToPublishersIds?: string[];
