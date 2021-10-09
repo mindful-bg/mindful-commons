@@ -22,6 +22,8 @@ export class GetContentFilter {
     @Allow()
     hasVideo?: boolean;
     @Allow()
+    seriesId?: string | null;
+    @Allow()
     hasAudio?: boolean;
     @Allow()
     skip?: number;
