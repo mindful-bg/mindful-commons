@@ -16,7 +16,7 @@ export class CreateContentDto {
     body: string;
 
     @Matches(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, {message: "Невалиден формат на слъг-а. Използвайте латински букви, числа и тирета(-)."})
-    @MaxLength(67, {message: "Слъг-а трябва да е от максимум $constraint1 символа."})
+    @MaxLength(85, {message: "Слъг-а трябва да е от максимум $constraint1 символа."})
     slug: string;
 
     @IsOptional()
