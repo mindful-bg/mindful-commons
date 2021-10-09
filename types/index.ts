@@ -7,3 +7,5 @@ export * from './commands'
 export * from './content/index'
 export * from './blog/index'
 export * from './publisher.entity'
+export * from './notification';
+export * from './event';

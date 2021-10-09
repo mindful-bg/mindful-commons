@@ -4,5 +4,6 @@ export enum ContentType {
     USER_STORY = "ЛИЧНА ИСТОРИЯ",
     PERSONAL_PAGE = "ЛИЧНА СТРАНИЦА",
     MINDFUL_BG_PAGE = "СПЕЦИАЛНА СТРАНИЦА НА САЙТА",
-    PUBLISHERS_RESOURCE = "РЕСУРС НА ПУБЛИКУВАЩИЯ"
+    PUBLISHERS_RESOURCE = "РЕСУРС НА ПУБЛИКУВАЩИЯ",
+    SERIES = "ПОРЕДИЦА"
 }

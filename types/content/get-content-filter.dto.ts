@@ -1,15 +1,12 @@
 import { Allow, IsString } from "class-validator";
 import { ContentType } from "./content-type.enum";
 import { MindfulAspects } from "./mindful-aspects.enum";
-import { MindfulContentFunctionType } from "./mindful-content-function-type";
 
 export class GetContentFilter {
     @Allow()
     id?: string;
     @Allow()
     mindfulAspect?: MindfulAspects;
-    @Allow()
-    mindfulContentFunctionType?: MindfulContentFunctionType;
     @Allow()
     dateCreated?: number;
     @Allow()
@@ -26,4 +23,8 @@ export class GetContentFilter {
     hasVideo?: boolean;
     @Allow()
     hasAudio?: boolean;
+    @Allow()
+    skip?: number;
+    @Allow()
+    limit?: number;
 }

@@ -1,15 +1,14 @@
 import { Expose } from "class-transformer";
 import { ContentType } from "./content-type.enum";
 import { MindfulAspects } from "./mindful-aspects.enum";
-import { MindfulContentFunctionType } from "./mindful-content-function-type";
-
-
 
 export class GetContentDto {
     @Expose()
     id: string;
     @Expose()
     dateCreated: number;
+    @Expose()
+    datePublished: number;
     @Expose()
     creatorId: string;
     @Expose()
@@ -25,8 +24,6 @@ export class GetContentDto {
     @Expose()
     mindfulAspect: MindfulAspects;
     @Expose()
-    mindfulContentFunctionType: MindfulContentFunctionType;
-    @Expose()
     featuredImageFileName: string;
     @Expose()
     vimeoVideoId?:number;
@@ -36,4 +33,6 @@ export class GetContentDto {
     tags?: string[];
     @Expose()
     isPublished?: boolean
+    @Expose()
+    seriesId?: boolean
 }
