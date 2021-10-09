@@ -33,7 +33,7 @@ export class CreateContentDto {
     // If featured image is present, video is not featured. 
     // If video is present, but no feature image is present, video is featured 
     @IsString({message: "Водеща снимка е задължително поле."})
-    featuredImageFileName?: string;
+    featuredImageFileName: string;
 
     @IsOptional() 
     @IsNumber({}, {message: "Вимео ИД трябва да е число."})
