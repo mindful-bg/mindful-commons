@@ -4,4 +4,5 @@ export class Series {
     contentIdsList: string[];
     hasContentWithVideo: boolean;
     hasContentWithAudio: boolean;
+    lastContentPublished?: number;
 }
