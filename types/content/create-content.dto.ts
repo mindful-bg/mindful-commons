@@ -7,6 +7,7 @@ export class CreateContentDto {
     @IsUUID()
     creatorId: string;
 
+    @ValidateIf(o => !o.seriesId)
     @IsString({message: "Заглавието е задължително"})
     @MinLength(5, {message: "Заглавието трябва да е от поне 8 символа"})
     @MaxLength(75, {message: "Заглавието трябва да е от максимум 75 символа"})
