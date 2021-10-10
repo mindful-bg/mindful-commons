@@ -35,4 +35,6 @@ export class GetContentDto {
     isPublished?: boolean
     @Expose()
     seriesId?: string;
+    seriesTitle?: string;
+    numberInSeries?: number;
 }
