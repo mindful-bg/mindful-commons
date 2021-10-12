@@ -16,7 +16,7 @@ export class GetContentFilter {
     @Allow()
     isPublished?: boolean;
     @Allow()
-    type?: ContentType;
+    types?: ContentType[];
     @Allow()
     creatorId?: string;
     @Allow()
