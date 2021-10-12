@@ -39,4 +39,6 @@ export class GetContentDto {
     seriesTitle?: string;
     @Expose()
     numberInSeries?: number;
+    @Expose()
+    seriesSlug?: string
 }
