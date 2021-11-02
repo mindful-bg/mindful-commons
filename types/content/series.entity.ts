@@ -5,4 +5,5 @@ export class Series {
     hasContentWithVideo: boolean;
     hasContentWithAudio: boolean;
     lastContentPublished?: number;
+    categoryId?: string;
 }
