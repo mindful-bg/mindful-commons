@@ -1,13 +1,13 @@
 {
   "name": "mindful-commons",
-  "version": "1.0.217",
+  "version": "1.0.218",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "./node_modules/.bin/tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pub": "git add . && git commit -m\"Auto-prepublish-commit\" && git push && tsc && npm version patch && npm publish"
+    "pub": "git add . && git commit -m\"Auto-prepublish-commit\" && git push && npx tsc && npm version patch && npm publish"
   },
   "author": "Wideyedwonderer",
   "license": "ISC",

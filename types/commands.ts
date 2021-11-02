@@ -12,7 +12,8 @@ export const COMMANDS = {
         UPDATE: 'UPDATE_CONTENT',
         PUBLISH: 'PUBLISH',
         GET_TAGS: 'GET_TAGS',
-        GET_SERIES: 'GET_SERIES'
+        GET_SERIES: 'GET_SERIES',
+        GET_ALL_SERIES_CONTENT_COUNT: 'GET_ALL_SERIES_CONTENT_COUNT'
     },
     BLOG: {
         CREATE: 'CREATE_BLOG',

@@ -7,3 +7,4 @@ export * from './user-auth.dto';
 export * from './update-publisher.dto';
 export * from './get-publishers.dto';
 export * from './change-password.dto';
+export * from './get-series-content-count.dto';
