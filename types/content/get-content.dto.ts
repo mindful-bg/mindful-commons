@@ -32,7 +32,7 @@ export class GetContentDto {
     @Expose()
     tags?: string[];
     @Expose()
-    isPublished?: boolean
+    isPublished?: boolean;
     @Expose()
     seriesId?: string;
     @Expose()
@@ -40,5 +40,7 @@ export class GetContentDto {
     @Expose()
     numberInSeries?: number;
     @Expose()
-    seriesSlug?: string
+    seriesSlug?: string 
+    @Expose()
+    pinned?: boolean;
 }

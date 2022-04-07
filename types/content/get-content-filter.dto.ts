@@ -24,6 +24,8 @@ export class GetContentFilter {
     @Allow()
     seriesId?: string | null;
     @Allow()
+    pinned?: boolean;
+    @Allow()
     hasAudio?: boolean;
     @Allow()
     skip?: number;
